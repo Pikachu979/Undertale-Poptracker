@@ -1,0 +1,34 @@
+{
+    "name": "Undertale Tracker",
+    "game_name": "Undertale",
+    "package_version": "0.0.1",
+    "package_uid": "undertale_ap",
+    "author": "Pikachu979 & Mathx2",
+    "variants": {
+        "Beta - Map Tracker": {
+            "display_name": "Map Tracker",
+            "flags": [
+                "ap"
+            ]
+        },
+        "Beta - Items Only": {
+            "display_name": "Items Only",
+            "flags": [
+                "ap"
+            ]
+        },
+        "Map Tracker": {
+            "display_name": "Beta - Map Tracker",
+            "flags": [
+                "ap"
+            ]
+        },
+        "Items Only": {
+            "display_name": "Beta - Items Only",
+            "flags": [
+                "ap"
+            ]
+        }
+    },
+    "min_poptracker_version": "0.27.0"
+}

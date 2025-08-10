@@ -1,0 +1,166 @@
+{
+    "tracker_horizontal": {
+        "type": "container",
+        "background": "#000000",
+        "content": {
+            "type": "dock",
+            "dropshadow": true,
+            "content": [
+                {
+                    "type": "dock",
+                    "dock": "bottom",
+                    "content": [
+                        {
+                            "type": "group",
+                            "header": "All Routes",
+                            "dock": "left",
+                            "content": {
+                                "type": "layout",
+                                "key": "all_item_grid"
+                            }
+                        },
+                        {
+                            "type": "group",
+                            "header": "Pacifist",
+                            "dock": "left",
+                            "content": {
+                                "type": "layout",
+                                "key": "pacifist_item_grid"
+                            }
+                        },
+                        {
+                            "type": "group",
+                            "header": "Neutral",
+                            "dock": "left",
+                            "content": {
+                                "type": "layout",
+                                "key": "neutral_item_grid"
+                            }
+                        },
+                        {
+                            "type": "group",
+                            "header": "Genocide",
+                            "dock": "left",
+                            "content": {
+                                "type": "layout",
+                                "key": "genocide_item_grid"
+                            }
+                        },
+                        {
+                            "type": "group",
+                            "header": "Options",
+                            "dock": "left",
+                            "content": {
+                                "type": "layout",
+                                "key": "option_grid"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "tabbed",
+                    "tabs": [
+                        {
+                            "title": "Area Select",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "areaselect"
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Ruins",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "ruins"
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Snowdin",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "snowdin"
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Waterfall",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "waterfall"
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Hotland",
+                            "content": {
+                                "type": "tabbed",
+                                "tabs": [
+                                    {
+                                        "title": "Hotland 1",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "hotland 1"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Hotland 2",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "hotland 2"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Hotland 3",
+                                        "content": {
+                                            "type": "map",
+                                            "maps": [
+                                                "hotland 3"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "title": "True Lab",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "truelab"
+                                ]
+                            }
+                        },
+                        {
+                            "title": "CORE",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "core"
+                                ]
+                            }
+                        },
+                        {
+                            "title": "New Home",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "newhome"
+                                ]
+                            }
+                        }
+                   ]
+                }
+            ]
+        }
+    }
+}

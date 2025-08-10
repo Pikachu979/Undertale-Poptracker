@@ -1,0 +1,62 @@
+[
+    {
+        "name": "areaselect",
+        "location_size": 48,
+        "location_border_thickness": 4,
+        "img": "images/maps/Area Select.png"
+    },
+    {
+        "name": "ruins",
+        "location_size": 16,
+        "location_border_thickness": 2,
+        "img": "images/maps/Ruins.png"
+    },
+    {
+        "name": "snowdin",
+        "location_size": 16,
+        "location_border_thickness": 2,
+        "img": "images/maps/Snowdin.png"
+    },
+    {
+        "name": "waterfall",
+        "location_size": 16,
+        "location_border_thickness": 2,
+        "img": "images/maps/Waterfall.png"
+    },
+    {
+        "name": "hotland 1",
+        "location_size": 12,
+        "location_border_thickness": 2,
+        "img": "images/maps/Hotland 1.png"
+    },
+    {
+        "name": "hotland 2",
+        "location_size": 16,
+        "location_border_thickness": 2,
+        "img": "images/maps/Hotland 2.png"
+    },
+    {
+        "name": "hotland 3",
+        "location_size": 16,
+        "location_border_thickness": 2,
+        "img": "images/maps/Hotland 3.png"
+    },
+    {
+        "name": "truelab",
+        "location_size": 16,
+        "location_border_thickness": 2,
+        "img": "images/maps/True Lab.png"
+    },   
+    {
+        "name": "core",
+        "location_size": 16,
+        "location_border_thickness": 2,
+        "img": "images/maps/CORE.png"
+    },   
+    {
+        "name": "newhome",
+        "location_size": 16,
+        "location_border_thickness": 2,
+        "img": "images/maps/New Home.png"
+    }
+    ]
