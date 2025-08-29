@@ -1,1140 +1,116 @@
 [
     {
         "name": "Levels",
-        "access_rules": [
-        ],
-        "visibility_rules": [
-            ["lvsanity_enabled", "$is_route|genocide"],
-            ["lvsanity_enabled", "$is_route|all_routes"]
-        ],
         "children": [
             {
-                "name": "LV2",
-                "access_rules": [
-                    "$reachable_level|2"
-                ],
+                "name": "STATS",
                 "sections": [
                     {
-                        "item_count": 1
+                        "name": "LOVE",
+                        "item_count": 19,
+                        "visibility_rules": [
+                            ["lvsanity_enabled", "$is_route|genocide"],
+                            ["lvsanity_enabled", "$is_route|all_routes"]
+                        ],
+                        "access_rules": [
+                            "$reachable_level|2, LOVE:19",
+                            "$reachable_level|3, LOVE:18",
+                            "$reachable_level|4, LOVE:17",
+                            "$reachable_level|5, LOVE:16",
+                            "$reachable_level|6, LOVE:15",
+                            "$reachable_level|7, LOVE:14",
+                            "$reachable_level|8, LOVE:13",
+                            "$reachable_level|9, LOVE:12",
+                            "$reachable_level|10, LOVE:12",
+                            "$reachable_level|11, LOVE:10",
+                            "$reachable_level|12, LOVE:9",
+                            "$reachable_level|13, LOVE:8",
+                            "$reachable_level|14, LOVE:7",
+                            "$reachable_level|15, LOVE:6",
+                            "$reachable_level|16, LOVE:5",
+                            "$reachable_level|17, LOVE:4",
+                            "$reachable_level|18, LOVE:3",
+                            "$reachable_level|19, LOVE:2",
+                            "$reachable_level|20, LOVE:1"
+                        ]
+                    },
+                    {
+                        "name": "ATK",
+                        "item_count": 19,
+                        "visibility_rules": [
+                            ["statsanity_enabled", "$is_route|genocide"],
+                            ["statsanity_enabled", "$is_route|all_routes"]
+                        ],
+                        "access_rules": [
+                            "$reachable_level|2, ATK:19",
+                            "$reachable_level|3, ATK:18",
+                            "$reachable_level|4, ATK:17",
+                            "$reachable_level|5, ATK:16",
+                            "$reachable_level|6, ATK:15",
+                            "$reachable_level|7, ATK:14",
+                            "$reachable_level|8, ATK:13",
+                            "$reachable_level|9, ATK:12",
+                            "$reachable_level|10, ATK:11",
+                            "$reachable_level|11, ATK:10",
+                            "$reachable_level|12, ATK:9",
+                            "$reachable_level|13, ATK:8",
+                            "$reachable_level|14, ATK:7",
+                            "$reachable_level|15, ATK:6",
+                            "$reachable_level|16, ATK:5",
+                            "$reachable_level|17, ATK:4",
+                            "$reachable_level|18, ATK:3",
+                            "$reachable_level|19, ATK:2",
+                            "$reachable_level|20, ATK:1"
+                        ]
+                    },
+                    {
+                        "name": "HP",
+                        "item_count": 19,
+                        "visibility_rules": [
+                            ["statsanity_enabled", "$is_route|genocide"],
+                            ["statsanity_enabled", "$is_route|all_routes"]
+                        ],
+                        "access_rules": [
+                            "$reachable_level|2, HP:19",
+                            "$reachable_level|3, HP:18",
+                            "$reachable_level|4, HP:17",
+                            "$reachable_level|5, HP:16",
+                            "$reachable_level|6, HP:15",
+                            "$reachable_level|7, HP:14",
+                            "$reachable_level|8, HP:13",
+                            "$reachable_level|9, HP:12",
+                            "$reachable_level|10, HP:12",
+                            "$reachable_level|11, HP:10",
+                            "$reachable_level|12, HP:9",
+                            "$reachable_level|13, HP:8",
+                            "$reachable_level|14, HP:7",
+                            "$reachable_level|15, HP:6",
+                            "$reachable_level|16, HP:5",
+                            "$reachable_level|17, HP:4",
+                            "$reachable_level|18, HP:3",
+                            "$reachable_level|19, HP:2",
+                            "$reachable_level|20, HP:1"
+                        ]
+                    },
+                    {
+                        "name": "DEF",
+                        "item_count": 4,
+                        "visibility_rules": [
+                            ["statsanity_enabled", "$is_route|genocide"],
+                            ["statsanity_enabled", "$is_route|all_routes"]
+                        ],
+                        "access_rules": [
+                            "$reachable_level|5, DEF:4",
+                            "$reachable_level|9, DEF:3",
+                            "$reachable_level|13, DEF:2",
+                            "$reachable_level|17, DEF:1"
+                        ]
                     }
                 ],
                 "map_locations": [
                     {
-                        "map": "levels",
+                        "map": "areaselect",
                         "x": 60,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV3",
-                "access_rules": [
-                    "$reachable_level|3"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 120,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV4",
-                "access_rules": [
-                    "$reachable_level|4"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 180,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV5",
-                "access_rules": [
-                    "$reachable_level|5"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 240,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV6",
-                "access_rules": [
-                    "$reachable_level|6"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 300,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV7",
-                "access_rules": [
-                    "$reachable_level|7"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 360,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV8",
-                "access_rules": [
-                    "$reachable_level|8"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 420,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV9",
-                "access_rules": [
-                    "$reachable_level|9"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 480,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV10",
-                "access_rules": [
-                    "$reachable_level|10"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 540,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV11",
-                "access_rules": [
-                    "$reachable_level|11"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 600,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV12",
-                "access_rules": [
-                    "$reachable_level|12"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 660,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV13",
-                "access_rules": [
-                    "$reachable_level|13"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 720,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV14",
-                "access_rules": [
-                    "$reachable_level|14"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 780,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV15",
-                "access_rules": [
-                    "$reachable_level|15"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 840,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV16",
-                "access_rules": [
-                    "$reachable_level|16"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 900,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV17",
-                "access_rules": [
-                    "$reachable_level|17"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 960,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV18",
-                "access_rules": [
-                    "$reachable_level|18"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 1020,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV19",
-                "access_rules": [
-                    "$reachable_level|19"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 1080,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV20",
-                "access_rules": [
-                    "$reachable_level|20"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "levels",
-                        "x": 1140,
-                        "y": 60
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "ATK",
-        "access_rules": [
-        ],
-        "visibility_rules": [
-            ["statsanity_enabled", "$is_route|genocide"],
-            ["statsanity_enabled", "$is_route|all_routes"]
-        ],
-        "children": [
-            {
-                "name": "LV2",
-                "access_rules": [
-                    "$reachable_level|2"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 60,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV3",
-                "access_rules": [
-                    "$reachable_level|3"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 120,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV4",
-                "access_rules": [
-                    "$reachable_level|4"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 180,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV5",
-                "access_rules": [
-                    "$reachable_level|5"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 240,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV6",
-                "access_rules": [
-                    "$reachable_level|6"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 300,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV7",
-                "access_rules": [
-                    "$reachable_level|7"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 360,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV8",
-                "access_rules": [
-                    "$reachable_level|8"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 420,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV9",
-                "access_rules": [
-                    "$reachable_level|9"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 480,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV10",
-                "access_rules": [
-                    "$reachable_level|10"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 540,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV11",
-                "access_rules": [
-                    "$reachable_level|11"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 600,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV12",
-                "access_rules": [
-                    "$reachable_level|12"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 660,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV13",
-                "access_rules": [
-                    "$reachable_level|13"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 720,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV14",
-                "access_rules": [
-                    "$reachable_level|14"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 780,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV15",
-                "access_rules": [
-                    "$reachable_level|15"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 840,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV16",
-                "access_rules": [
-                    "$reachable_level|16"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 900,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV17",
-                "access_rules": [
-                    "$reachable_level|17"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 960,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV18",
-                "access_rules": [
-                    "$reachable_level|18"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 1020,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV19",
-                "access_rules": [
-                    "$reachable_level|19"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 1080,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV20",
-                "access_rules": [
-                    "$reachable_level|20"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "atk",
-                        "x": 1140,
-                        "y": 60
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "DEF",
-        "access_rules": [
-        ],
-        "visibility_rules": [
-            ["statsanity_enabled", "$is_route|genocide"],
-            ["statsanity_enabled", "$is_route|all_routes"]
-        ],
-        "children": [
-            {
-                "name": "LV5",
-                "access_rules": [
-                    "$reachable_level|5"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "def",
-                        "x": 240,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV9",
-                "access_rules": [
-                    "$reachable_level|9"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "def",
-                        "x": 480,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV13",
-                "access_rules": [
-                    "$reachable_level|13"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "def",
-                        "x": 720,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV17",
-                "access_rules": [
-                    "$reachable_level|17"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "def",
-                        "x": 960,
-                        "y": 60
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "HP",
-        "access_rules": [
-        ],
-        "visibility_rules": [
-            ["statsanity_enabled", "$is_route|genocide"],
-            ["statsanity_enabled", "$is_route|all_routes"]
-        ],
-        "children": [
-            {
-                "name": "LV2",
-                "access_rules": [
-                    "$reachable_level|2"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 60,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV3",
-                "access_rules": [
-                    "$reachable_level|3"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 120,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV4",
-                "access_rules": [
-                    "$reachable_level|4"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 180,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV5",
-                "access_rules": [
-                    "$reachable_level|5"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 240,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV6",
-                "access_rules": [
-                    "$reachable_level|6"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 300,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV7",
-                "access_rules": [
-                    "$reachable_level|7"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 360,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV8",
-                "access_rules": [
-                    "$reachable_level|8"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 420,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV9",
-                "access_rules": [
-                    "$reachable_level|9"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 480,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV10",
-                "access_rules": [
-                    "$reachable_level|10"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 540,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV11",
-                "access_rules": [
-                    "$reachable_level|11"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 600,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV12",
-                "access_rules": [
-                    "$reachable_level|12"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 660,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV13",
-                "access_rules": [
-                    "$reachable_level|13"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 720,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV14",
-                "access_rules": [
-                    "$reachable_level|14"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 780,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV15",
-                "access_rules": [
-                    "$reachable_level|15"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 840,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV16",
-                "access_rules": [
-                    "$reachable_level|16"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 900,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV17",
-                "access_rules": [
-                    "$reachable_level|17"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 960,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV18",
-                "access_rules": [
-                    "$reachable_level|18"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 1020,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV19",
-                "access_rules": [
-                    "$reachable_level|19"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 1080,
-                        "y": 60
-                    }
-                ]
-            },
-            {
-                "name": "LV20",
-                "access_rules": [
-                    "$reachable_level|20"
-                ],
-                "sections": [
-                    {
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "hp",
-                        "x": 1140,
                         "y": 60
                     }
                 ]
@@ -1143,17 +119,33 @@
     },
     {
         "name": "Area Select",
-        "access_rules": [
-            "areaselect"
-        ],
         "children": [
             {
-                "name": "Ruins Key",
-                "access_rules": [
-                ],
+                "name": "Hub Shop",
                 "sections": [
                     {
-                        "item_count": 1
+                        "item_count": 100,
+                        "visibility_rules": [
+                            "beta2"
+                        ]
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "areaselect",
+                        "x": 300,
+                        "y": 100
+                    }
+                ]
+            },
+            {
+                "name": "Ruins Key",
+                "sections": [
+                    {
+                        "hosted_item": "ruinskey",
+                        "access_rules": [
+                            "ruinskey"
+                        ]
                     }
                 ],
                 "map_locations": [
@@ -1166,12 +158,12 @@
             },
             {
                 "name": "Snowdin Key",
-                "access_rules": [
-                    
-                ],
                 "sections": [
                     {
-                        "item_count": 1
+                        "hosted_item": "snowdinkey",
+                        "access_rules": [
+                            "snowdinkey"
+                        ]
                     }
                 ],
                 "map_locations": [
@@ -1184,11 +176,13 @@
             },
             {
                 "name": "Waterfall Key",
-                "access_rules": [
-                ],
+                
                 "sections": [
                     {
-                        "item_count": 1
+                        "access_rules": [
+                            "waterfallkey"
+                        ],
+                        "hosted_item": "waterfallkey"
                     }
                 ],
                 "map_locations": [
@@ -1201,11 +195,12 @@
             },
             {
                 "name": "Hotland Key",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
+                        "access_rules": [
+                            "hotlandkey"
+                        ],
+                        "hosted_item": "hotlandkey"
                     }
                 ],
                 "map_locations": [
@@ -1218,11 +213,12 @@
             },
             {
                 "name": "CORE Key",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
+                        "access_rules": [
+                            "corekey"
+                        ],
+                        "hosted_item": "corekey"
                     }
                 ],
                 "map_locations": [
@@ -1238,35 +234,29 @@
     {
         "name": "Ruins",
         "access_rules": [
-            "ruins"
+            "ruinskey"
         ],
         "children": [
             {
                 "name": "Monster Candy Bowl",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "name": "1",
-                        "item_count": 1
+                        "name": "1"
                     },
                     {
-                        "name": "2",
-                        "item_count": 1
+                        "name": "2"
                     },
                     {
-                        "name": "3",
-                        "item_count": 1
+                        "name": "3"
                     },
                     {
-                        "name": "4",
-                        "item_count": 1
+                        "name": "4"
                     }
                 ],
                 "map_locations": [
                     {
                         "map": "ruins",
-                        "x": 506,
+                        "x": 507,
                         "y": 313
                     }
                 ]
@@ -1274,16 +264,14 @@
             {
                 "name": "Spider Bake Sale",
                 "access_rules": [
-                    "[waterfall]"
+                    "[waterfallkey]"
                 ],
                 "sections": [
                     {
-                        "name": "Left",
-                        "item_count": 1
+                        "name": "Left"
                     },
                     {
-                        "name": "Right",
-                        "item_count": 1
+                        "name": "Right"
                     }
                 ],
                 "map_locations": [
@@ -1296,11 +284,8 @@
             },
             {
                 "name": "Faded Ribbon",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1313,11 +298,8 @@
             },
             {
                 "name": "Toy Knife",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1330,11 +312,8 @@
             },
             {
                 "name": "Butterscotch Pie",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1355,7 +334,6 @@
                 ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1368,11 +346,8 @@
             },
             {
                 "name": "Ruins Colored Lever Fall Room",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1385,11 +360,8 @@
             },
             {
                 "name": "Ruins Toriel's Room",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1402,11 +374,8 @@
             },
             {
                 "name": "Ruins Toriel's Kitchen",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1422,27 +391,22 @@
     {
         "name": "Snowdin",
         "access_rules": [
-            "snowdin"
+            "snowdinkey"
         ],
         "children": [
             {
                 "name": "Snowman Piece",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "name": "1",
-                        "item_count": 1
+                        "name": "1"
                     },
                     {
                         "visibility_rules": ["$is_route|genocide", "$is_route|all_routes"],
-                        "name": "2",
-                        "item_count": 1
+                        "name": "2"
                     },
                     {
                         "visibility_rules": ["$is_route|genocide", "$is_route|all_routes"],
-                        "name": "3",
-                        "item_count": 1
+                        "name": "3"
                     }
                 ],
                 "map_locations": [
@@ -1456,12 +420,11 @@
             {
                 "name": "Nicecream",
                 "access_rules": [
-                    "[waterfall]"
+                    "[waterfallkey]"
                 ],
                 "visibility_rules": ["$is_route|pacifist", "$is_route|neutral", "$is_route|all_routes"],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1476,11 +439,10 @@
                 "name": "Undyne Letter",
                 "visibility_rules": ["$is_route|pacifist", "$is_route|all_routes"],
                 "access_rules": [
-                    ["skeleton", "fish", "hotland", "waterfall"]
+                    "skeleton, fish, hotlandkey, waterfallkey"
                 ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1499,24 +461,20 @@
             {
                 "name": "Snowdin Shop",
                 "access_rules": [
-                    "[waterfall]"
+                    "[waterfallkey]"
                 ],
                 "sections": [
                     {
-                        "name": "1",
-                        "item_count": 1
+                        "name": "1"
                     },
                     {
-                        "name": "2",
-                        "item_count": 1
+                        "name": "2"
                     },
                     {
-                        "name": "3",
-                        "item_count": 1
+                        "name": "3"
                     },
                     {
-                        "name": "4",
-                        "item_count": 1
+                        "name": "4"
                     }
                 ],
                 "map_locations": [
@@ -1531,11 +489,10 @@
                 "name": "Papyrus Hangout",
                 "visibility_rules": ["$is_route|pacifist", "$is_route|all_routes"],
                 "access_rules": [
-                    ["skeleton", "jump"]
+                    "skeleton, jump"
                 ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1550,13 +507,12 @@
                 "name": "Papyrus Fight",
                 "access_rules": [
                     "[$has_more_then_n_kills|snowdin_kills|16]",
-                    ["$is_route|all_routes", "jump"],
-                    ["$is_route|neutral", "jump"],
-                    ["$is_route|pacifist", "jump"]
+                    "$is_route|all_routes, jump",
+                    "$is_route|neutral, jump",
+                    "$is_route|pacifist, jump"
                 ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1569,11 +525,8 @@
             },
             {
                 "name": "Snowdin Forest Fishing Rod",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1586,11 +539,8 @@
             },
             {
                 "name": "Snowdin Forest Dog Smell Rating Station",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1603,11 +553,8 @@
             },
             {
                 "name": "Snowdin Forest Sliding Puzzle Fall Room",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1620,11 +567,8 @@
             },
             {
                 "name": "Snowdin Town Inn",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1637,11 +581,8 @@
             },
             {
                 "name": "Snowdin Town Grillby's",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1654,11 +595,8 @@
             },
             {
                 "name": "Snowdin Town Librarby",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1671,11 +609,8 @@
             },
             {
                 "name": "Snowdin Forest Mysterious Door",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1691,26 +626,21 @@
     {
         "name": "Waterfall",
         "access_rules": [
-            "waterfall"
+            "waterfallkey"
         ],
         "children": [
             {
                 "name": "Nicecream Salesman",
-                "access_rules": [
-                ],
                 "visibility_rules": ["$is_route|pacifist", "$is_route|neutral", "$is_route|all_routes"],
                 "sections": [
                     {
-                        "name": "Nicecream",
-                        "item_count": 1
+                        "name": "Nicecream"
                     },
                     {
-                        "name": "Free Nicecream",
-                        "item_count": 1
+                        "name": "Free Nicecream"
                     },
                     {
-                        "name": "Punch Card",
-                        "item_count": 1
+                        "name": "Punch Card"
                     }
                 ],
                 "map_locations": [
@@ -1723,11 +653,8 @@
             },
             {
                 "name": "Quiche Bench",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1740,11 +667,8 @@
             },
             {
                 "name": "Hidden Tutu",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1757,11 +681,8 @@
             },
             {
                 "name": "Ballet Shoes",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1774,16 +695,12 @@
             },
             {
                 "name": "Astronaut Food",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "name": "1",
-                        "item_count": 1
+                        "name": "1"
                     },
                     {
-                        "name": "2",
-                        "item_count": 1
+                        "name": "2"
                     }
                 ],
                 "map_locations": [
@@ -1796,24 +713,18 @@
             },
             {
                 "name": "Gerson Shop",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "name": "1",
-                        "item_count": 1
+                        "name": "1"
                     },
                     {
-                        "name": "2",
-                        "item_count": 1
+                        "name": "2"
                     },
                     {
-                        "name": "3",
-                        "item_count": 1
+                        "name": "3"
                     },
                     {
-                        "name": "4",
-                        "item_count": 1
+                        "name": "4"
                     }
                 ],
                 "map_locations": [
@@ -1826,25 +737,21 @@
             },
             {
                 "name": "Temmie Shop",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "name": "1",
-                        "item_count": 1
+                        "name": "1"
                     },
                     {
-                        "name": "2",
-                        "item_count": 1
+                        "name": "2"
                     },
                     {
-                        "name": "3",
-                        "item_count": 1
+                        "name": "3"
                     },
                     {
                         "name": "4",
-                        "access_rules": ["[gold]"],
-                        "item_count": 1
+                        "access_rules": [
+                            "[gold]"
+                        ]
                     }
                 ],
                 "map_locations": [
@@ -1859,11 +766,10 @@
                 "name": "Undyne Cook-off",
                 "visibility_rules": ["$is_route|pacifist", "$is_route|all_routes"],
                 "access_rules": [
-                    ["skeleton", "snowdin", "fish"]
+                    "skeleton, snowdinkey, fish"
                 ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1884,7 +790,6 @@
                 ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1902,28 +807,22 @@
                 ],
                 "sections": [
                     {
-                        "name": "1",
-                        "item_count": 1
+                        "name": "1"
                     },
                     {
-                        "name": "2",
-                        "item_count": 1
+                        "name": "2"
                     },
                     {
-                        "name": "3",
-                        "item_count": 1
+                        "name": "3"
                     },
                     {
-                        "name": "4",
-                        "item_count": 1
+                        "name": "4"
                     },
                     {
-                        "name": "5",
-                        "item_count": 1
+                        "name": "5"
                     },
                     {
-                        "name": "6",
-                        "item_count": 1
+                        "name": "6"
                     }
                 ],
                 "map_locations": [
@@ -1936,11 +835,8 @@
             },
             {
                 "name": "Waterfall Piano Puzzle",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1953,11 +849,8 @@
             },
             {
                 "name": "Waterfall Napstablook's House",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1973,16 +866,13 @@
     {
         "name": "Hotland",
         "access_rules": [
-            "hotland"
+            "hotlandkey"
         ],
         "children": [
             {
                 "name": "Instant Noodles",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -1995,11 +885,8 @@
             },
             {
                 "name": "Burnt Pan",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -2012,12 +899,9 @@
             },
             {
                 "name": "Stained Apron",
-                "access_rules": [
-                ],
                 "visibility_rules": ["$is_route|pacifist", "$is_route|neutral", "$is_route|all_routes"],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -2030,11 +914,8 @@
             },
             {
                 "name": "Core Top-Left Trash Can",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -2048,29 +929,24 @@
             {
                 "name": "Sans Hot Dog Sales",
                 "access_rules": [
-                    "[waterfall]"
+                    "[waterfallkey]"
                 ],
                 "visibility_rules": ["$is_route|pacifist", "$is_route|all_routes"],
                 "sections": [
                     {
-                        "name": "1",
-                        "item_count": 1
+                        "name": "1"
                     },
                     {
-                        "name": "2",
-                        "item_count": 1
+                        "name": "Cat Sale"
                     },
                     {
-                        "name": "3",
-                        "item_count": 1
+                        "name": "2"
                     },
                     {
-                        "name": "4",
-                        "item_count": 1
+                        "name": "3"
                     },
                     {
-                        "name": "5",
-                        "item_count": 1
+                        "name": "4"
                     }
                 ],
                 "map_locations": [
@@ -2084,13 +960,12 @@
             {
                 "name": "Popato Chisps Machine",
                 "access_rules": [
-                    ["letter", "fish", "skeleton", "extractor", "leftKey", "rightKey"],
-                    ["letter", "fish", "skeleton", "extractor", "$has_key_pieces"]
+                    "letter, fish, skeleton, extractor, leftKey, rightKey",
+                    "letter, fish, skeleton, extractor, $has_key_pieces"
                 ],
                 "visibility_rules": ["$is_route|pacifist", "$is_route|all_routes"],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -2104,12 +979,11 @@
             {
                 "name": "Hotel Door Hush Puppy",
                 "access_rules": [
-                    ["dog"]
+                    "dog"
                 ],
                 "visibility_rules": ["$is_route|pacifist", "$is_route|all_routes"],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -2123,24 +997,20 @@
             {
                 "name": "Bratty Catty Shop",
                 "access_rules": [
-                    "[waterfall]"
+                    "[waterfallkey]"
                 ],
                 "sections": [
                     {
-                        "name": "1",
-                        "item_count": 1
+                        "name": "1"
                     },
                     {
-                        "name": "2",
-                        "item_count": 1
+                        "name": "2"
                     },
                     {
-                        "name": "3",
-                        "item_count": 1
+                        "name": "3"
                     },
                     {
-                        "name": "4",
-                        "item_count": 1
+                        "name": "4"
                     }
                 ],
                 "map_locations": [
@@ -2154,24 +1024,20 @@
             {
                 "name": "Burgerpants Shop",
                 "access_rules": [
-                    "[waterfall]"
+                    "[waterfallkey]"
                 ],
                 "sections": [
                     {
-                        "name": "1",
-                        "item_count": 1
+                        "name": "1"
                     },
                     {
-                        "name": "2",
-                        "item_count": 1
+                        "name": "2"
                     },
                     {
-                        "name": "3",
-                        "item_count": 1
+                        "name": "3"
                     },
                     {
-                        "name": "4",
-                        "item_count": 1
+                        "name": "4"
                     }
                 ],
                 "map_locations": [
@@ -2185,14 +1051,13 @@
             {
                 "name": "Mettaton Fight",
                 "access_rules": [
-                    ["[$has_more_then_n_kills|hotland_kills|40]"],
-                    ["$is_route|all_routes"],
-                    ["$is_route|neutral"],
-                    ["$is_route|pacifist"]
+                    "[$has_more_then_n_kills|hotland_kills|40]",
+                    "$is_route|all_routes",
+                    "$is_route|neutral",
+                    "$is_route|pacifist"
                 ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -2206,12 +1071,11 @@
             {
                 "name": "Alphys Date",
                 "access_rules": [
-                    ["fish", "letter", "skeleton", "snowdin", "waterfall"]
+                    "fish, letter, skeleton, snowdinkey, waterfallkey"
                 ],
                 "visibility_rules": ["$is_route|pacifist", "$is_route|all_routes"],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -2224,11 +1088,8 @@
             },
             {
                 "name": "Hotland Upper Lab Room",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -2241,11 +1102,8 @@
             },
             {
                 "name": "Hotland Resort Restaurant",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -2261,22 +1119,18 @@
     {
         "name": "New Home",
         "access_rules": [
-            "core_key",
-            "hotland, beta" 
+            "corekey, beta1",
+            "hotlandkey, beta2"
         ],
         "children": [
             {
                 "name": "New Home Presents",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "name": "1",
-                        "item_count": 1
+                        "name": "1"
                     },
                     {
-                        "name": "2",
-                        "item_count": 1
+                        "name": "2"
                     }
                 ],
                 "map_locations": [
@@ -2289,11 +1143,8 @@
             },
             {
                 "name": "Left New Home Key",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [
@@ -2306,11 +1157,8 @@
             },
             {
                 "name": "Right New Home Key",
-                "access_rules": [
-                ],
                 "sections": [
                     {
-                        "item_count": 1
                     }
                 ],
                 "map_locations": [

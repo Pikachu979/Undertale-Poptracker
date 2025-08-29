@@ -5,25 +5,25 @@
     "package_uid": "undertale_ap",
     "author": "Pikachu979 & Mathx2",
     "variants": {
-        "Beta - Map Tracker": {
+        "Map Tracker": {
             "display_name": "Map Tracker",
             "flags": [
                 "ap"
             ]
         },
-        "Beta - Items Only": {
+        "Items Only": {
             "display_name": "Items Only",
             "flags": [
                 "ap"
             ]
         },
-        "Map Tracker": {
+        "Beta - Map Tracker": {
             "display_name": "Beta - Map Tracker",
             "flags": [
                 "ap"
             ]
         },
-        "Items Only": {
+        "Beta - Items Only": {
             "display_name": "Beta - Items Only",
             "flags": [
                 "ap"

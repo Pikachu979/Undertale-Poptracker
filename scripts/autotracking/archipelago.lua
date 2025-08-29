@@ -45,7 +45,9 @@ end
 
 function forceUpdate()
     local update = Tracker:FindObjectForCode("update")
-    update.Active = not update.Active
+    if update then
+        update.Active = not update.Active
+    end
 end
 
 function onClearHandler(slot_data)
@@ -77,12 +79,14 @@ function onClearHandler(slot_data)
 end
 
 function onClear(slot_data)
-    SLOT_DATA = slot_data 
+    SLOT_DATA = slot_data
     if SLOT_DATA["entrance_rando"] == true or SLOT_DATA["entrance_rando"] == false then
-  PLAYING_VERSION = "beta2"
-else
-  PLAYING_VERSION = "v1.0"
-end
+        Tracker:FindObjectForCode("beta").CurrentStage = 1
+        print("this is beta2")
+    else
+        Tracker:FindObjectForCode("beta").CurrentStage = 0
+        print("this is v1")
+    end
     CUR_INDEX = -1
     -- reset locations
     for _, location_array in pairs(LOCATION_MAPPING) do
@@ -91,7 +95,9 @@ end
                 local location_obj = Tracker:FindObjectForCode(location)
                 if location_obj then
                     if location:sub(1, 1) == "@" then
-                        location_obj.AvailableChestCount = location_obj.ChestCount
+                        if location_obj.AvailableChestCount or false then
+                            location_obj.AvailableChestCount = location_obj.ChestCount
+                        end
                     else
                         location_obj.Active = false
                     end
@@ -101,24 +107,23 @@ end
     end
     -- reset items
     for _, item_pair in pairs(ITEM_MAPPING) do
-        for item_type, item_code in pairs(item_pair) do
-            local item_obj = Tracker:FindObjectForCode(item_code)
-            if item_obj then
-                if item_obj.Type == "toggle" then
-                    item_obj.Active = false
-                elseif item_obj.Type == "progressive" then
-                    item_obj.CurrentStage = 0
-                    item_obj.Active = false
-                elseif item_obj.Type == "consumable" then
-                    if item_obj.MinCount then
-                        item_obj.AcquiredCount = item_obj.MinCount
-                    else
-                        item_obj.AcquiredCount = 0
-                    end
-                elseif item_obj.Type == "progressive_toggle" then
-                    item_obj.CurrentStage = 0
-                    item_obj.Active = false
+        local item_code = item_pair[1]
+        local item_obj = Tracker:FindObjectForCode(item_code)
+        if item_obj then
+            if item_obj.Type == "toggle" then
+                item_obj.Active = false
+            elseif item_obj.Type == "progressive" then
+                item_obj.CurrentStage = 0
+                item_obj.Active = false
+            elseif item_obj.Type == "consumable" then
+                if item_obj.MinCount then
+                    item_obj.AcquiredCount = item_obj.MinCount
+                else
+                    item_obj.AcquiredCount = 0
                 end
+            elseif item_obj.Type == "progressive_toggle" then
+                item_obj.CurrentStage = 0
+                item_obj.Active = false
             end
         end
     end
@@ -135,6 +140,7 @@ end
         Archipelago:SetNotify({HINTS_ID})
         Archipelago:Get({HINTS_ID})
     end
+    initSettings()
 end
 
 function onItem(index, item_id, item_name, player_number)
@@ -148,31 +154,29 @@ function onItem(index, item_id, item_name, player_number)
         --print(string.format("onItem: could not find item mapping for id %s", item_id))
         return
     end
-    for _, item_pair in pairs(item) do
-        item_code = item_pair[1]
-        item_type = item_pair[2]
-        local item_obj = Tracker:FindObjectForCode(item_code)
-        if item_obj then
-            if item_obj.Type == "toggle" then
-                -- print("toggle")
+    item_code = item[1]
+    item_type = item[2]
+    local item_obj = Tracker:FindObjectForCode(item_code)
+    if item_obj then
+        if item_obj.Type == "toggle" then
+            -- print("toggle")
+            item_obj.Active = true
+        elseif item_obj.Type == "progressive" then
+            -- print("progressive")
+            item_obj.Active = true
+        elseif item_obj.Type == "consumable" then
+            -- print("consumable")
+            item_obj.AcquiredCount = item_obj.AcquiredCount + item_obj.Increment * (tonumber(item[3]) or 1)
+        elseif item_obj.Type == "progressive_toggle" then
+            -- print("progressive_toggle")
+            if item_obj.Active then
+                item_obj.CurrentStage = item_obj.CurrentStage + 1
+            else
                 item_obj.Active = true
-            elseif item_obj.Type == "progressive" then
-                -- print("progressive")
-                item_obj.Active = true
-            elseif item_obj.Type == "consumable" then
-                -- print("consumable")
-                item_obj.AcquiredCount = item_obj.AcquiredCount + item_obj.Increment * (tonumber(item_pair[3]) or 1)
-            elseif item_obj.Type == "progressive_toggle" then
-                -- print("progressive_toggle")
-                if item_obj.Active then
-                    item_obj.CurrentStage = item_obj.CurrentStage + 1
-                else
-                    item_obj.Active = true
-                end
             end
-        else
-            print(string.format("onItem: could not find object for code %s", item_code[1]))
         end
+    else
+        print(string.format("onItem: could not find object for code %s", item_code))
     end
 end
 
@@ -293,7 +297,124 @@ function updateHints(locationID, status) -->
     -- end
 end
 
+function initSettings()
+    --is beta
+    if Tracker:FindObjectForCode("beta").CurrentStage == 1 then
+        --set route
+        if SLOT_DATA.route_required == "neutral" then
+            Tracker:FindObjectForCode("route_required").CurrentStage = 0
+            print("route set to neutral")
+        elseif SLOT_DATA.route_required == "pacifist" then
+            Tracker:FindObjectForCode("route_required").CurrentStage = 1
+            print("route set to pacifist")
+        elseif SLOT_DATA.route_required == "genocide" then
+            Tracker:FindObjectForCode("route_required").CurrentStage = 2
+            print("route set to genocide")
+        elseif SLOT_DATA.route_required == "all_routes" then
+            Tracker:FindObjectForCode("route_required").CurrentStage = 3
+            print("route set to all routes")
+        end
+        --set route
 
+        --set kill sanity
+        if SLOT_DATA.kill_sanity == true then
+            Tracker:FindObjectForCode("killsanity_enabled").Active = true
+            print("kill sanity set to true")
+        elseif SLOT_DATA.kill_sanity == false then
+            Tracker:FindObjectForCode("killsanity_enabled").Active = false
+            print("kill sanity set to false")
+        end
+        --set kill sanity
+
+        --set kill sanity pack size
+        if SLOT_DATA.kill_sanity_pack_size then
+            Tracker:FindObjectForCode("kill_sanity_pack_size").AcquiredCount = SLOT_DATA.kill_sanity_pack_size
+            print("kill sanity pack size set to", SLOT_DATA.kill_sanity_pack_size)
+        end
+        --set kill sanity pack size
+
+        --set spare sanity
+        if SLOT_DATA.spare_sanity == true then
+            Tracker:FindObjectForCode("sparesanity_enabled").Active = true
+            print("spare sanity set to true")
+        elseif SLOT_DATA.spare_sanity == false then
+            Tracker:FindObjectForCode("sparesanity_enabled").Active = false
+            print("spare sanity set to false")
+        end
+        --set spare sanity
+
+        --set spare sanity max
+        if SLOT_DATA.spare_sanity_max then
+            Tracker:FindObjectForCode("spare_sanity_max").AcquiredCount = SLOT_DATA.spare_sanity_max
+            Tracker:FindObjectForCode("@Sanity/Ruins/Spare").AvailableChestCount = SLOT_DATA.spare_sanity_max
+            Tracker:FindObjectForCode("@Sanity/Snowdin/Spare").AvailableChestCount = SLOT_DATA.spare_sanity_max
+            Tracker:FindObjectForCode("@Sanity/Waterfall/Spare").AvailableChestCount = SLOT_DATA.spare_sanity_max
+            Tracker:FindObjectForCode("@Sanity/Hotland/Spare").AvailableChestCount = SLOT_DATA.spare_sanity_max
+            print("spare sanity max set to", SLOT_DATA.spare_sanity_max)
+        end
+        --set spare sanity max
+
+        --set spare sanity pack size
+        if SLOT_DATA.spare_sanity_pack_size then
+            Tracker:FindObjectForCode("kill_sanity_pack_size").AcquiredCount = SLOT_DATA.spare_sanity_pack_size
+            print("spare sanity pack size set to", SLOT_DATA.spare_sanity_pack_size)
+        end
+        --set spare sanity pack size
+        --is beta 
+
+        --is NOT beta
+        --set route
+    else
+        if SLOT_DATA.route == "neutral" then
+            Tracker:FindObjectForCode("route_required").CurrentStage = 0
+            print("route set to neutral")
+        elseif SLOT_DATA.route == "pacifist" then
+            Tracker:FindObjectForCode("route_required").CurrentStage = 1
+            print("route set to pacifist")
+        elseif SLOT_DATA.route == "genocide" then
+            Tracker:FindObjectForCode("route_required").CurrentStage = 2
+            print("route set to genocide")
+        elseif SLOT_DATA.route == "all_routes" then
+            Tracker:FindObjectForCode("route_required").CurrentStage = 3
+            print("route set to all routes")
+        end
+        --set route
+    end
+    --is NOT beta
+
+
+    --settings for beta and not beta
+    --required keys
+    if SLOT_DATA.req_pieces then
+        Tracker:FindObjectForCode("req_pieces").AcquiredCount = SLOT_DATA.req_pieces
+        print("required pieces set to", SLOT_DATA.req_pieces)
+    end
+    --required keys
+    
+    --set love sanity
+    if SLOT_DATA.rando_love == true then
+        Tracker:FindObjectForCode("lvsanity_enabled").Active = true
+        print("love sanity set to true")
+    elseif SLOT_DATA.rando_love == false then
+        Tracker:FindObjectForCode("lvsanity_enabled").Active = false
+        print("love sanity set to false")
+    end
+    --set love sanity
+
+    --set stats sanity
+    if SLOT_DATA.rando_stats == true then
+        Tracker:FindObjectForCode("statsanity_enabled").Active = true
+        print("stats sanity set to true")
+    elseif SLOT_DATA.rando_stats == false then
+        Tracker:FindObjectForCode("statsanity_enabled").Active = false
+        print("stats sanity set to false")
+    --set stats sanity
+    end
+end
+
+function StateChange(item_code)
+    return
+end
 -- ScriptHost:AddWatchForCode("settings autofill handler", "autofill_settings", autoFill)
 Archipelago:AddClearHandler("clear handler", onClearHandler)
 Archipelago:AddItemHandler("item handler", onItem)

@@ -86,12 +86,12 @@
         "codes": "hotlandkey"
     },
     {
-        "name": "Mystery Key",
+        "name": "CORE Key",
         "type": "toggle",
         "disabled_img": "images/items/Keys/inactive/KeyCore.png",
         "disabled_img_mods": "none",
         "img": "images/items/Keys/active/KeyCore.png",
-        "codes": "mystery_key"
+        "codes": "corekey"
     },
     {
         "name": "Required Route",
@@ -132,7 +132,7 @@
         "codes": "rightKey",
         "img": "images/items/Keys/active/KeyNewHome.png",
         "disabled_img": "images/items/Keys/inactive/KeyNewHome.png",
-        "disabled_img_mods": "none"
+        "disabled_img_mods": "righthomekey"
     },
     {
         "name": "Left Home Key",
@@ -140,7 +140,7 @@
         "codes": "leftKey",
         "img": "images/items/Keys/active/KeyNewHome.png",
         "disabled_img": "images/items/Keys/inactive/KeyNewHome.png",
-        "disabled_img_mods": "none"
+        "disabled_img_mods": "lefthomekey"
     },
     {
         "name": "Key Pieces",
@@ -353,5 +353,60 @@
         "type": "toggle",
         "img": "images/items/spr_bluefeet.png",
         "codes": "jump"
+    },
+    {
+        "name": "Mystery Key",
+        "type": "toggle",
+        "img": "images/items/.png",
+        "codes": "mystery_key"
+    },
+    {
+        "name": "Playing Version",
+        "type": "progressive",
+        "allow_disabled": false,
+        "codes": "beta",
+        "stages": [
+            {
+                "name": "1.0",
+                "img": "images/items/.png",
+                "codes": "beta1",
+                "inherit_codes": false
+            },
+            {
+                "name": "Beta 2",
+                "img": "images/items/.png",
+                "codes": "beta2",
+                "inherit_codes": false
+            }
+        ]
+        
+    },
+    {
+        "name": "LOVE",
+        "type": "consumable",
+        "codes": "LOVE",
+        "max_quantity": 19,
+        "initial_quantity": 19
+    },
+    {
+        "name": "ATK",
+        "type": "consumable",
+        "codes": "ATK",
+        "max_quantity": 19,
+        "initial_quantity": 19
+    },
+    {
+        "name": "HP",
+        "type": "consumable",
+        "codes": "HP",
+        "max_quantity": 19,
+        "initial_quantity": 19
+    },
+    {
+        "name": "DEF",
+        "type": "consumable",
+        "codes": "DEF",
+        "max_quantity": 4,
+        "initial_quantity": 4
     }
 ]
